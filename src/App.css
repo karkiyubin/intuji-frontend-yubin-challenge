@@ -4,10 +4,13 @@
   --blue: #3f9bfc;
   --gray: #d0d5dd;
   --black: #101828;
+  --white: #ffffff;
   --green: #12b76a;
   --silver: #667085;
   --yellow: #fac301;
   --light-gray: #e7e7e7;
+  --lighter-gray: #f4f8fb;
+  --almost-white: #e5e5e5;
 }
 
 * {
@@ -30,4 +33,16 @@ body {
   justify-content: center;
   align-items: center;
   background-color: aquamarine;
+}
+
+.mantine-SegmentedControl-control::before {
+  background-color: transparent !important;
+}
+
+.mantine-SegmentedControl-root {
+  margin: 0 !important;
+}
+
+.mantine-SegmentedControl-label {
+  padding: 10px 10px 0 10px !important;
 }
