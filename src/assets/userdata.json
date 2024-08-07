@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "data": [
+    {
+      "name": "21 Industries",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": false,
+      "lastActive": 8,
+      "isOwnTeam": true,
+      "isMember": false
+    },
+    {
+      "name": "Darcy Patterson",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": true,
+      "lastActive": null,
+      "isOwnTeam": false,
+      "isMember": true
+    },
+    {
+      "name": "Alex Hamilton",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": false,
+      "lastActive": 3,
+      "isOwnTeam": false,
+      "isMember": true
+    },
+    {
+      "name": "Bowen Group",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": false,
+      "lastActive": 12,
+      "isOwnTeam": true,
+      "isMember": false
+    },
+    {
+      "name": "Taylor Smith",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": true,
+      "lastActive": null,
+      "isOwnTeam": false,
+      "isMember": true
+    },
+    {
+      "name": "21 Industries",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": false,
+      "lastActive": 8,
+      "isOwnTeam": true,
+      "isMember": false
+    },
+    {
+      "name": "Darcy Patterson",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": true,
+      "lastActive": null,
+      "isOwnTeam": false,
+      "isMember": true
+    },
+    {
+      "name": "Alex Hamilton",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": false,
+      "lastActive": 3,
+      "isOwnTeam": false,
+      "isMember": true
+    },
+    {
+      "name": "Bowen Group",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": false,
+      "lastActive": 12,
+      "isOwnTeam": true,
+      "isMember": false
+    },
+    {
+      "name": "Taylor Smith",
+      "imageUrl": "../../public/user.jpeg",
+      "isActive": true,
+      "lastActive": null,
+      "isOwnTeam": false,
+      "isMember": true
+    }
+  ]
+}
