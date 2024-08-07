@@ -1,8 +1,6 @@
 .contacts-main-container {
   width: 35rem;
-  height: 37rem;
   overflow: hidden;
-  padding: 0.6rem 0;
   border-radius: 1rem;
-  background-color: cadetblue;
+  background-color: var(--white);
 }

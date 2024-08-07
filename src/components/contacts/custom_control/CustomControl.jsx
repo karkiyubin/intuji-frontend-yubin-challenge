@@ -43,10 +43,10 @@ const CustomControl = () => {
         value={selectedOption}
         onChange={setSelectedOption}
         style={{
-          backgroundColor: "var(--white)",
+          border: "none",
           marginBottom: "0",
           paddingBottom: "0",
-          border: "none",
+          backgroundColor: "var(--white)",
         }}
         data={[
           {

@@ -21,7 +21,13 @@ const CustomInput = () => {
   );
 
   return (
-    <div style={{ padding: "0 1rem" }}>
+    <div
+      style={{
+        paddingLeft: "1rem",
+        paddingRight: "1rem",
+        paddingTop: "0.5rem",
+      }}
+    >
       <Input
         size="lg"
         variant="unstyled"
