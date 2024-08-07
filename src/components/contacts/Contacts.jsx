@@ -12,6 +12,25 @@ const Contacts = ({ userList }) => {
   const [searchText, setSearchText] = useState("");
 
   const [selectedTab, setSelectedTab] = useState("all");
+  const [filteredUserList, setFilteredUserList] = useState(null);
+
+  useEffect(() => {
+    let filteredList = userList;
+
+    if (selectedTab === "teams") {
+      filteredList = filteredList?.filter((item) => item?.isOwnTeam);
+    } else if (selectedTab === "members") {
+      filteredList = filteredList?.filter((item) => item?.isMember);
+    }
+
+    if (searchText.length > 0) {
+      filteredList = filteredList?.filter((item) =>
+        item.name.toLowerCase().trim().includes(searchText)
+      );
+    }
+
+    setFilteredUserList(filteredList);
+  }, [selectedTab, userList, searchText]);
 
   const memberCount = {
     all: userList?.length || 0,
@@ -36,7 +55,22 @@ const Contacts = ({ userList }) => {
           overflowX: "scroll",
         }}
       >
-        <UserProfileCard />
+        {Array.isArray(userList) && userList.length > 0 ? (
+          filteredUserList?.map((item, index) => (
+            <UserProfileCard key={index} userData={item} />
+          ))
+        ) : (
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Loader />
+          </div>
+        )}
       </div>
       <Divider />
       <div
