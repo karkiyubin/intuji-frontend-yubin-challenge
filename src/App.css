@@ -28,11 +28,10 @@ body {
   width: 100vw;
   display: flex;
   height: 100vh;
-  max-width: 1200px;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: aquamarine;
+  background-color: var(--light-gray);
 }
 
 .mantine-SegmentedControl-control::before {
