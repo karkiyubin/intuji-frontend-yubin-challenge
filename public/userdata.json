@@ -3,7 +3,7 @@
   "data": [
     {
       "name": "21 Industries",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": false,
       "lastActive": 8,
       "isOwnTeam": true,
@@ -11,7 +11,7 @@
     },
     {
       "name": "Darcy Patterson",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": true,
       "lastActive": null,
       "isOwnTeam": false,
@@ -19,7 +19,7 @@
     },
     {
       "name": "Alex Hamilton",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": false,
       "lastActive": 3,
       "isOwnTeam": false,
@@ -27,7 +27,7 @@
     },
     {
       "name": "Bowen Group",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": false,
       "lastActive": 12,
       "isOwnTeam": true,
@@ -35,7 +35,7 @@
     },
     {
       "name": "Taylor Smith",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": true,
       "lastActive": null,
       "isOwnTeam": false,
@@ -43,7 +43,7 @@
     },
     {
       "name": "21 Industries",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": false,
       "lastActive": 8,
       "isOwnTeam": true,
@@ -51,7 +51,7 @@
     },
     {
       "name": "Darcy Patterson",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": true,
       "lastActive": null,
       "isOwnTeam": false,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Alex Hamilton",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": false,
       "lastActive": 3,
       "isOwnTeam": false,
@@ -67,7 +67,7 @@
     },
     {
       "name": "Bowen Group",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": false,
       "lastActive": 12,
       "isOwnTeam": true,
@@ -75,7 +75,7 @@
     },
     {
       "name": "Taylor Smith",
-      "imageUrl": "../../public/user.jpeg",
+      "imageUrl": "./user.jpeg",
       "isActive": true,
       "lastActive": null,
       "isOwnTeam": false,
