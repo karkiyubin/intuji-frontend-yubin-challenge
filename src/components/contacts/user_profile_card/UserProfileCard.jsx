@@ -5,12 +5,18 @@ const UserProfileCard = () => {
     <div
       style={{
         display: "flex",
-        padding: "1rem 0",
         alignItems: "center",
         flexDirection: "row",
         justifyContent: "space-between",
         backgroundColor: "var(--white)",
+        padding: "1rem 2.3rem 1rem 1.6rem",
       }}
+      onMouseOver={(e) =>
+        (e.currentTarget.style.backgroundColor = "var(--lighter-gray)")
+      }
+      onMouseOut={(e) =>
+        (e.currentTarget.style.backgroundColor = "var(--white)")
+      }
     >
       <div
         style={{

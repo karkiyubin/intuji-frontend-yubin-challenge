@@ -1,5 +1,6 @@
-import { SegmentedControl } from "@mantine/core";
 import { useState } from "react";
+
+import { SegmentedControl } from "@mantine/core";
 
 const CustomControl = () => {
   const [selectedOption, setSelectedOption] = useState("all");
