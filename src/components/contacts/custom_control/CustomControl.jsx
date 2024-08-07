@@ -1,10 +1,6 @@
-import { useState } from "react";
-
 import { SegmentedControl } from "@mantine/core";
 
-const CustomControl = () => {
-  const [selectedOption, setSelectedOption] = useState("all");
-
+const CustomControl = ({ count, selectedTab, setSelectedTab }) => {
   const controlItem = (label, total, isSelected) => (
     <>
       <div
@@ -20,7 +16,7 @@ const CustomControl = () => {
         <span>{label}</span>
         <span
           style={{
-            padding: "0 0.3rem",
+            width: "2rem",
             borderRadius: "0.3rem",
             backgroundColor: "var(--lighter-gray)",
           }}
@@ -41,8 +37,8 @@ const CustomControl = () => {
     <div style={{ padding: "0rem 1rem", marginTop: "0.4rem" }}>
       <SegmentedControl
         color="var(--white)"
-        value={selectedOption}
-        onChange={setSelectedOption}
+        value={selectedTab}
+        onChange={setSelectedTab}
         style={{
           border: "none",
           marginBottom: "0",
@@ -54,24 +50,24 @@ const CustomControl = () => {
             value: "all",
             label: controlItem(
               "All",
-              24,
-              selectedOption === "all" ? true : false
+              count.all || 0,
+              selectedTab === "all" ? true : false
             ),
           },
           {
             value: "teams",
             label: controlItem(
               "Teams",
-              24,
-              selectedOption === "teams" ? true : false
+              count.teams || 0,
+              selectedTab === "teams" ? true : false
             ),
           },
           {
             value: "members",
             label: controlItem(
               "Members",
-              24,
-              selectedOption === "members" ? true : false
+              count.members || 0,
+              selectedTab === "members" ? true : false
             ),
           },
         ]}

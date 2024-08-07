@@ -1,15 +1,11 @@
-import { useState } from "react";
-
 import { Input } from "@mantine/core";
 
-const CustomInput = () => {
-  const [inputValue, setInputValue] = useState("");
-
+const CustomInput = ({ text, setText }) => {
   const crossIcon = (
     <i
       className="ri-close-line"
       style={{ fontSize: "1.3rem", cursor: "pointer", color: "var(--silver)" }}
-      onClick={() => setInputValue("")}
+      onClick={() => setText("")}
     />
   );
 
@@ -31,12 +27,12 @@ const CustomInput = () => {
       <Input
         size="lg"
         variant="unstyled"
-        value={inputValue}
+        value={text}
         leftSection={searchIcon}
         rightSection={crossIcon}
         placeholder="Search Contacts"
         rightSectionPointerEvents="all"
-        onChange={(event) => setInputValue(event.currentTarget.value)}
+        onChange={(event) => setText(event.currentTarget.value.toLowerCase())}
       />
     </div>
   );
