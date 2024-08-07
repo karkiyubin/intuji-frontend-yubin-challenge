@@ -1,6 +1,4 @@
-import UserImage from "../../../../public/user.jpeg";
-
-const UserProfileCard = () => {
+const UserProfileCard = ({ userData }) => {
   return (
     <div
       style={{
@@ -35,24 +33,39 @@ const UserProfileCard = () => {
             bottom: "0.3rem",
             position: "absolute",
             borderRadius: "10rem",
-            backgroundColor: "var(--green)",
+            backgroundColor: userData?.isActive
+              ? "var(--green)"
+              : userData?.lastActive < 5
+              ? "var(--yellow)"
+              : "var(--gray)",
             border: "0.1rem solid var(--white)",
           }}
         />
         <img
           width={60}
           height={60}
-          src={UserImage}
+          src={userData?.imageUrl}
           alt="user profile"
           style={{ borderRadius: "10rem" }}
         />
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <span>Dave Peterson</span>
-          <span style={{ color: "var(--silver)" }}>Active 8 days ago</span>
+          <span>{userData?.name || "Dave Peterson"}</span>
+          <span style={{ color: "var(--silver)" }}>
+            {" "}
+            {userData?.isActive
+              ? "Active now"
+              : `Active ${userData?.lastActive} days ago`}
+          </span>
         </div>
       </div>
       <div>
-        <span style={{ color: "var(--silver)" }}>Team</span>
+        <span style={{ color: "var(--silver)" }}>
+          {userData?.isOwnTeam
+            ? "Team"
+            : userData?.isMember
+            ? "Member"
+            : "Default"}
+        </span>
       </div>
     </div>
   );
