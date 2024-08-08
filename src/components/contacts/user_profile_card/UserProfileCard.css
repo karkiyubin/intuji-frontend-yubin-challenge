@@ -1,0 +1,45 @@
+.user-profile-card-main {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 1rem 2.3rem 1rem 1.6rem;
+}
+
+.user-profile-card-main:hover {
+  background-color: var(--lighter-gray);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.user-profile-card-right {
+  gap: 1.1rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-profile-card-status {
+  left: 2.98rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  bottom: 0.3rem;
+  position: absolute;
+  border-radius: 10rem;
+  background-color: var(--gray);
+  border: 0.1rem solid var(--white);
+}
+
+.user-profile-card-status.active {
+  background-color: var(--green);
+}
+
+.user-profile-card-status.inactive {
+  background-color: var(--yellow);
+}
+
+.user-profile-card-name {
+  display: flex;
+  flex-direction: column;
+}

@@ -14,6 +14,12 @@ const Contacts = ({ userList }) => {
   const [selectedTab, setSelectedTab] = useState("all");
   const [filteredUserList, setFilteredUserList] = useState(null);
 
+  const memberCount = {
+    all: userList?.length || 0,
+    teams: userList?.filter((item) => item.isOwnTeam)?.length || 0,
+    members: userList?.filter((item) => item.isMember)?.length || 0,
+  };
+
   useEffect(() => {
     let filteredList = userList;
 
@@ -32,12 +38,6 @@ const Contacts = ({ userList }) => {
     setFilteredUserList(filteredList);
   }, [selectedTab, userList, searchText]);
 
-  const memberCount = {
-    all: userList?.length || 0,
-    teams: userList?.filter((item) => item.isOwnTeam)?.length || 0,
-    members: userList?.filter((item) => item.isMember)?.length || 0,
-  };
-
   return (
     <div className="contacts-main-container">
       <CustomInput text={searchText} setText={setSearchText} />
@@ -48,40 +48,19 @@ const Contacts = ({ userList }) => {
         setSelectedTab={setSelectedTab}
       />
       <Divider />
-      <div
-        style={{
-          height: "25rem",
-          maxHeight: "25rem",
-          overflowX: "scroll",
-        }}
-      >
+      <div className="contacts-user-card-container">
         {Array.isArray(userList) && userList.length > 0 ? (
           filteredUserList?.map((item, index) => (
             <UserProfileCard key={index} userData={item} />
           ))
         ) : (
-          <div
-            style={{
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div className="contacts-loader-container">
             <Loader />
           </div>
         )}
       </div>
       <Divider />
-      <div
-        style={{
-          gap: "1.4rem",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "flex-end",
-          padding: "1.4rem 2.3rem 1.4rem 0",
-        }}
-      >
+      <div className="contacts-footer-container">
         <Button
           size="sm"
           variant="outline"
