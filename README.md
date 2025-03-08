@@ -1,4 +1,4 @@
-# Intuji Frontend Assignment - Yubin Karki
+# [Intuji Frontend Assignment](https://intuji-frontend-yubin-challenge.vercel.app/) - Yubin Karki
 
 This repo contains the solution for the assignment for Frontend developer role.  
 Uses mantine UI components and remixicon. Project initialized using Vite.  
